@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "468132708874",
+    "firebase_url": "https://sougdan-f3a28-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "sougdan-f3a28",
+    "storage_bucket": "sougdan-f3a28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468132708874:android:80d1b70c98ee0b81acd5f3",
+        "android_client_info": {
+          "package_name": "com.sougdan.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468132708874-mb01bqgrfs694forfbhpvktkhq0rl0bb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sougdan.customer",
+            "certificate_hash": "50f77557cad35bac935b4346497ba87528a7215e"
+          }
+        },
+        {
+          "client_id": "468132708874-ub7jncrt500li4lqnmjkh06nh5a1iajq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh_Wc_Z_VESeEWY8XzZoE6goDlkULdErE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468132708874-ub7jncrt500li4lqnmjkh06nh5a1iajq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "468132708874-agbmk3rhaj6p45ilgme15e4bukpljfm0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sougdan.customer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468132708874:android:d05a94cc1b7e35bfacd5f3",
+        "android_client_info": {
+          "package_name": "com.sougdan.delivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468132708874-ub7jncrt500li4lqnmjkh06nh5a1iajq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh_Wc_Z_VESeEWY8XzZoE6goDlkULdErE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468132708874-ub7jncrt500li4lqnmjkh06nh5a1iajq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "468132708874-agbmk3rhaj6p45ilgme15e4bukpljfm0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sougdan.customer"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468132708874:android:754fb745587c5133acd5f3",
+        "android_client_info": {
+          "package_name": "com.sougdan.seller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468132708874-baiu10qdneok9k0jh637hsr5i76139g4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sougdan.seller",
+            "certificate_hash": "50f77557cad35bac935b4346497ba87528a7215e"
+          }
+        },
+        {
+          "client_id": "468132708874-ub7jncrt500li4lqnmjkh06nh5a1iajq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh_Wc_Z_VESeEWY8XzZoE6goDlkULdErE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468132708874-ub7jncrt500li4lqnmjkh06nh5a1iajq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "468132708874-agbmk3rhaj6p45ilgme15e4bukpljfm0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sougdan.customer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
