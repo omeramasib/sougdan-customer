@@ -107,6 +107,7 @@ class _HomePageState extends State<HomePage>
     user.setEmail(setting.email);
     user.setProfilePic(setting.profileUrl);
     _refresh();
+    callApi();
     Future.delayed(Duration.zero).then(
       (value) async{
         print('do initialize');

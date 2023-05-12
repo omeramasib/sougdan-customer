@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Sougdan</string>
+	<string>sougdan</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>sougdan customer</string>
+	<string>sougdan</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -61,6 +61,8 @@
 	<string>Allow permission to access camera to take photo for profile</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow access of location to fetch accurate address to deliver product at right place</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Allow access of location to fetch accurate address to deliver product at right place</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow access of microphone to search product by voice</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -77,6 +79,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -93,6 +97,8 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 	<key>io.flutter.embedded_views_preview</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 </dict>
 </plist>

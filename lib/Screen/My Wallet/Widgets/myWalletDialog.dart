@@ -367,81 +367,90 @@ class _AddMoneyDialogState extends State<AddMoneyDialog> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
-                      child: TextFormField(
-                        keyboardType: TextInputType.number,
-                        validator: (val) => StringValidation.validateField(
-                            val!, getTranslated(context, 'FIELD_REQUIRED')),
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.fontColor,
-                        ),
-                        decoration: InputDecoration(
-                          hintText: getTranslated(context, 'AMOUNT'),
-                          hintStyle: Theme.of(context)
-                              .textTheme
-                              .subtitle1!
-                              .copyWith(
-                                color: Theme.of(context).colorScheme.lightBlack,
-                                fontWeight: FontWeight.normal,
-                              ),
-                        ),
-                        controller: amountTextController,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
-                      child: TextFormField(
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.fontColor,
-                        ),
-                        decoration: InputDecoration(
-                          hintText: getTranslated(context, 'MSG'),
-                          hintStyle: Theme.of(context)
-                              .textTheme
-                              .subtitle1!
-                              .copyWith(
-                                color: Theme.of(context).colorScheme.lightBlack,
-                                fontWeight: FontWeight.normal,
-                              ),
-                        ),
-                        controller: messageTextController,
-                      ),
-                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+                    //   child: TextFormField(
+                    //     keyboardType: TextInputType.number,
+                    //     validator: (val) => StringValidation.validateField(
+                    //         val!, getTranslated(context, 'FIELD_REQUIRED')),
+                    //     autovalidateMode: AutovalidateMode.onUserInteraction,
+                    //     style: TextStyle(
+                    //       color: Theme.of(context).colorScheme.fontColor,
+                    //     ),
+                    //     decoration: InputDecoration(
+                    //       hintText: getTranslated(context, 'AMOUNT'),
+                    //       hintStyle: Theme.of(context)
+                    //           .textTheme
+                    //           .subtitle1!
+                    //           .copyWith(
+                    //             color: Theme.of(context).colorScheme.lightBlack,
+                    //             fontWeight: FontWeight.normal,
+                    //           ),
+                    //     ),
+                    //     controller: amountTextController,
+                    //   ),
+                    // ),
+                    // Padding(
+                    //   padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+                    //   child: TextFormField(
+                    //     autovalidateMode: AutovalidateMode.onUserInteraction,
+                    //     style: TextStyle(
+                    //       color: Theme.of(context).colorScheme.fontColor,
+                    //     ),
+                    //     decoration: InputDecoration(
+                    //       hintText: getTranslated(context, 'MSG'),
+                    //       hintStyle: Theme.of(context)
+                    //           .textTheme
+                    //           .subtitle1!
+                    //           .copyWith(
+                    //             color: Theme.of(context).colorScheme.lightBlack,
+                    //             fontWeight: FontWeight.normal,
+                    //           ),
+                    //     ),
+                    //     controller: messageTextController,
+                    //   ),
+                    // ),
+                    // Padding(
+                    //   padding: const EdgeInsets.fromLTRB(20.0, 10, 20.0, 5),
+                    //   child: Text(
+                    //     getTranslated(context, 'SELECT_PAYMENT')!,
+                    //     style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                    //           fontFamily: 'ubuntu',
+                    //         ),
+                    //   ),
+                    // ),
+                    // const Divider(),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20.0, 10, 20.0, 5),
                       child: Text(
-                        getTranslated(context, 'SELECT_PAYMENT')!,
+                        getTranslated(context, 'add_money_to_wallet')!,
                         style: Theme.of(context).textTheme.subtitle2!.copyWith(
                               fontFamily: 'ubuntu',
                             ),
                       ),
                     ),
-                    const Divider(),
-                    payWarn
-                        ? Padding(
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 20.0),
-                            child: Text(
-                              getTranslated(context, 'payWarning')!,
-                              style:
-                                  Theme.of(context).textTheme.caption!.copyWith(
-                                        color: Colors.red,
-                                        fontFamily: 'ubuntu',
-                                      ),
-                            ),
-                          )
-                        : Container(),
-                    context.read<SystemProvider>().isPaypalEnable == null
-                        ? const Center(child: CircularProgressIndicator())
-                        : Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: getPaymentMethodList(
-                              context,
-                            ),
-                          ),
+                    // payWarn
+                    //     ? Padding(
+                    //         padding:
+                    //             const EdgeInsets.symmetric(horizontal: 20.0),
+                    //         child: Text(
+                    //           getTranslated(context, 'payWarning')!,
+                    //           style:
+                    //               Theme.of(context).textTheme.caption!.copyWith(
+                    //                     color: Colors.red,
+                    //                     fontFamily: 'ubuntu',
+                    //                   ),
+                    //         ),
+                    //       )
+                    //     : Container(),
+                    // context.read<SystemProvider>().isPaypalEnable == null
+                    //     ? const Center(child: CircularProgressIndicator())
+                    //     : Column(
+                    //         mainAxisAlignment: MainAxisAlignment.start,
+                    //         children: getPaymentMethodList(
+                    //           context,
+                    //         ),
+                    //       ),
                   ],
                 ),
               ),
@@ -463,84 +472,84 @@ class _AddMoneyDialogState extends State<AddMoneyDialog> {
             Routes.pop(context);
           },
         ),
-        TextButton(
-          child: Text(
-            getTranslated(context, 'SEND')!,
-            style: Theme.of(context).textTheme.subtitle2!.copyWith(
-                  color: Theme.of(context).colorScheme.fontColor,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'ubuntu',
-                ),
-          ),
-          onPressed: () async {
-            final form = formKey.currentState!;
-            if (form.validate() && amountTextController!.text != '0') {
-              form.save();
-              if (systemProvider!.selectedPaymentMethodName == null) {
-                setState(() {
-                  payWarn = true;
-                });
-              } else {
-                if (systemProvider!.selectedPaymentMethodName!.trim() ==
-                    getTranslated(context, 'STRIPE_LBL')!.trim()) {
-                  var response = await doPaymentWithStripe(
-                      price: amountTextController!.text,
-                      currencyCode:
-                          context.read<SystemProvider>().stripeCurrencyCode!,
-                      paymentFor: 'wallet');
-                  Navigator.pop(context, response);
-                  await updateUserWalletAmount();
-                } else if (systemProvider!.selectedPaymentMethodName!.trim() ==
-                    getTranslated(context, 'RAZORPAY_LBL')!.trim()) {
-                  var response = await doPaymentWithRazorpay(
-                      price: int.parse(amountTextController!.text));
-                  await updateUserWalletAmount();
-                  Navigator.pop(context, response);
-                } else if (systemProvider!.selectedPaymentMethodName!.trim() ==
-                    getTranslated(context, 'PAYSTACK_LBL')!.trim()) {
-                  var response = await doPaymentWithPayStack(
-                      price: int.parse(amountTextController!.text));
-                  Navigator.pop(context, response);
-                  await updateUserWalletAmount();
-                } else if (systemProvider!.selectedPaymentMethodName ==
-                    getTranslated(context, 'PAYTM_LBL')) {
-                  var response = await doPaymentWithPaytm(
-                      price: double.parse(amountTextController!.text));
-                  Navigator.pop(context, response);
-                  await updateUserWalletAmount();
-                } else if (systemProvider!.selectedPaymentMethodName ==
-                    getTranslated(context, 'PAYPAL_LBL')) {
-                  var response = await doPaymentWithPaypal(
-                      price: amountTextController!.text);
-                  Navigator.pop(context, response);
-                  await updateUserWalletAmount();
-                } else if (systemProvider!.selectedPaymentMethodName ==
-                    getTranslated(context, 'FLUTTERWAVE_LBL')) {
-                  var response = await doPaymentWithFlutterWave(
-                      price: amountTextController!.text);
-                  Navigator.pop(context, response);
-                  await updateUserWalletAmount();
-                } else if (systemProvider!.selectedPaymentMethodName ==
-                    getTranslated(context, 'FLUTTERWAVE_LBL')) {
-                  var response = await doPaymentWithFlutterWave(
-                      price: amountTextController!.text);
-                  Navigator.pop(context, response);
-                  await updateUserWalletAmount();
-                } else if (systemProvider!.selectedPaymentMethodName ==
-                    getTranslated(context, 'MidTrans')) {
-                  var response = await doPaymentWithMidTrash(
-                      price: amountTextController!.text);
-                } else if (systemProvider!.selectedPaymentMethodName ==
-                    'My Fatoorah') {
-                  var response =
-                      await doMyFatoorah(price: amountTextController!.text);
-                  await updateUserWalletAmount();
-                  Navigator.pop(context, response);
-                }
-              }
-            }
-          },
-        )
+        // TextButton(
+        //   child: Text(
+        //     getTranslated(context, 'SEND')!,
+        //     style: Theme.of(context).textTheme.subtitle2!.copyWith(
+        //           color: Theme.of(context).colorScheme.fontColor,
+        //           fontWeight: FontWeight.bold,
+        //           fontFamily: 'ubuntu',
+        //         ),
+        //   ),
+        //   onPressed: () async {
+        //     final form = formKey.currentState!;
+        //     if (form.validate() && amountTextController!.text != '0') {
+        //       form.save();
+        //       if (systemProvider!.selectedPaymentMethodName == null) {
+        //         setState(() {
+        //           payWarn = true;
+        //         });
+        //       } else {
+        //         if (systemProvider!.selectedPaymentMethodName!.trim() ==
+        //             getTranslated(context, 'STRIPE_LBL')!.trim()) {
+        //           var response = await doPaymentWithStripe(
+        //               price: amountTextController!.text,
+        //               currencyCode:
+        //                   context.read<SystemProvider>().stripeCurrencyCode!,
+        //               paymentFor: 'wallet');
+        //           Navigator.pop(context, response);
+        //           await updateUserWalletAmount();
+        //         } else if (systemProvider!.selectedPaymentMethodName!.trim() ==
+        //             getTranslated(context, 'RAZORPAY_LBL')!.trim()) {
+        //           var response = await doPaymentWithRazorpay(
+        //               price: int.parse(amountTextController!.text));
+        //           await updateUserWalletAmount();
+        //           Navigator.pop(context, response);
+        //         } else if (systemProvider!.selectedPaymentMethodName!.trim() ==
+        //             getTranslated(context, 'PAYSTACK_LBL')!.trim()) {
+        //           var response = await doPaymentWithPayStack(
+        //               price: int.parse(amountTextController!.text));
+        //           Navigator.pop(context, response);
+        //           await updateUserWalletAmount();
+        //         } else if (systemProvider!.selectedPaymentMethodName ==
+        //             getTranslated(context, 'PAYTM_LBL')) {
+        //           var response = await doPaymentWithPaytm(
+        //               price: double.parse(amountTextController!.text));
+        //           Navigator.pop(context, response);
+        //           await updateUserWalletAmount();
+        //         } else if (systemProvider!.selectedPaymentMethodName ==
+        //             getTranslated(context, 'PAYPAL_LBL')) {
+        //           var response = await doPaymentWithPaypal(
+        //               price: amountTextController!.text);
+        //           Navigator.pop(context, response);
+        //           await updateUserWalletAmount();
+        //         } else if (systemProvider!.selectedPaymentMethodName ==
+        //             getTranslated(context, 'FLUTTERWAVE_LBL')) {
+        //           var response = await doPaymentWithFlutterWave(
+        //               price: amountTextController!.text);
+        //           Navigator.pop(context, response);
+        //           await updateUserWalletAmount();
+        //         } else if (systemProvider!.selectedPaymentMethodName ==
+        //             getTranslated(context, 'FLUTTERWAVE_LBL')) {
+        //           var response = await doPaymentWithFlutterWave(
+        //               price: amountTextController!.text);
+        //           Navigator.pop(context, response);
+        //           await updateUserWalletAmount();
+        //         } else if (systemProvider!.selectedPaymentMethodName ==
+        //             getTranslated(context, 'MidTrans')) {
+        //           var response = await doPaymentWithMidTrash(
+        //               price: amountTextController!.text);
+        //         } else if (systemProvider!.selectedPaymentMethodName ==
+        //             'My Fatoorah') {
+        //           var response =
+        //               await doMyFatoorah(price: amountTextController!.text);
+        //           await updateUserWalletAmount();
+        //           Navigator.pop(context, response);
+        //         }
+        //       }
+        //     }
+        //   },
+        // )
       ],
     );
   }
